@@ -2,7 +2,7 @@
 using SeleniumExtras.PageObjects;
 
 
-namespace OnlineStore.PageObjects
+namespace OrganeHR
 {
     public class LoginPage
     {

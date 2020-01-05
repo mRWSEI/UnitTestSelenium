@@ -3,13 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumFireFoxSampleTEST", "SeleniumTest_01\SeleniumFireFoxSampleTEST.csproj", "{6F31303C-5984-4DAA-A926-D10AECC09CD5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeHRSystem", "SeleniumClass\OrangeHRSystem.csproj", "{EFAB6A7B-57F5-4359-BE83-AD73FD6BCD85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTestLoginPage", "SeleniumTestLoginPage\SeleniumTestLoginPage.csproj", "{0150304D-D0DC-4336-BEFA-9A901A8A9818}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumFireFoxSample", "SeleniumFireFoxSample\SeleniumFireFoxSample.csproj", "{3704A810-50C5-42B8-9CCB-11C681539929}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrangeHRSystemTest", "SeleniumTestLoginPage\OrangeHRSystemTest.csproj", "{0150304D-D0DC-4336-BEFA-9A901A8A9818}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6F31303C-5984-4DAA-A926-D10AECC09CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F31303C-5984-4DAA-A926-D10AECC09CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F31303C-5984-4DAA-A926-D10AECC09CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F31303C-5984-4DAA-A926-D10AECC09CD5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EFAB6A7B-57F5-4359-BE83-AD73FD6BCD85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EFAB6A7B-57F5-4359-BE83-AD73FD6BCD85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFAB6A7B-57F5-4359-BE83-AD73FD6BCD85}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,10 +21,6 @@ Global
 		{0150304D-D0DC-4336-BEFA-9A901A8A9818}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0150304D-D0DC-4336-BEFA-9A901A8A9818}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0150304D-D0DC-4336-BEFA-9A901A8A9818}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3704A810-50C5-42B8-9CCB-11C681539929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3704A810-50C5-42B8-9CCB-11C681539929}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3704A810-50C5-42B8-9CCB-11C681539929}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3704A810-50C5-42B8-9CCB-11C681539929}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium;
-using SeleniumExtras.PageObjects;
-using OnlineStore.PageObjects;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
 
-namespace SeleniumClass
+namespace OrganeHR
 {
     class Program
     {
@@ -21,15 +18,10 @@ namespace SeleniumClass
             {
                 try
                 {
-                    //_driver.SwitchTo().DefaultContent();
-                    //_driver.Switch().Frame().
                     AdminPanel adminPanel = new AdminPanel(_driver);
                     LoginPage loginPage = new LoginPage(_driver);
                     loginPage.GoToPage();
-
-
-                    //_driver.SwitchTo().Frame("preview-frame");
-
+                    
                     WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
                     //check if there is any iframe then get that frame and switch on frame using folloiwng code.
                     var frame = wait.Until(ExpectedConditions.ElementExists(By.Name("preview-frame")));
@@ -37,8 +29,6 @@ namespace SeleniumClass
 
 
                     loginPage.UserName.Click();
-                    //var el = _driver.FindElementById("txtUsername");
-
                     loginPage.UserName.SendKeys("opensourcecms");
                     loginPage.Password.SendKeys("opensourcecms");
                     loginPage.Submit.Click();
@@ -49,21 +39,21 @@ namespace SeleniumClass
                     _driver.ExecuteScript("arguments[0].scrollIntoView(true);", button);
                     wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.XPath(@"/html/body/div[5]/ul/li[1]/ul/li[3]/ul/li[1]/a")));
 
-                    //Klikamy w Menu
+                    //Najezdzamy na Menu i klikamy
                     Actions actions = new Actions(_driver);
                     actions.MoveToElement(adminPanel.MenuAdmin).Perform();
                     actions.MoveToElement(adminPanel.MenuAdminQualification).Perform();
                     actions.MoveToElement(adminPanel.MenuAdminQualificationSkills).Click().Perform();
                     
                     _driver.SwitchTo().Frame(0);
-                    List<Skills> skills = new List<Skills>();
+                    List<Methods.Skills> skills = new List<Methods.Skills>();
                     string randomPart = System.Guid.NewGuid().ToString().Substring(0, 4);
-                    skills.Add(new Skills() { Skill = "skill"+randomPart, SkillDescription = "description1" });
+                    skills.Add(new Methods.Skills() { Skill = "skill"+randomPart, SkillDescription = "description1" });
 
                     randomPart = System.Guid.NewGuid().ToString().Substring(0, 4);
-                    skills.Add(new Skills() { Skill = "skill2"+randomPart, SkillDescription = "description2" });
+                    skills.Add(new Methods.Skills() { Skill = "skill2"+randomPart, SkillDescription = "description2" });
 
-                    foreach (Skills skill in skills)
+                    foreach (Methods.Skills skill in skills)
                     {
                         adminPanel.BtnAdd.Click();
                         adminPanel.InputSkillName.SendKeys(skill.Skill);
@@ -84,12 +74,6 @@ namespace SeleniumClass
                     _driver.Quit();
                 }
             }
-        }
-
-        public class Skills
-        {
-            public string Skill { get; set; }
-            public string SkillDescription { get; set; }
         }
     }
 }

@@ -74,12 +74,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SeleniumFireFoxSample\SeleniumFireFoxSample.csproj">
-      <Project>{3704a810-50c5-42b8-9ccb-11c681539929}</Project>
-      <Name>SeleniumFireFoxSample</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

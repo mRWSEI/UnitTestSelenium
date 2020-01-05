@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
-namespace SeleniumClass
+namespace OrganeHR
 {
     public class AdminPanel
     {   
